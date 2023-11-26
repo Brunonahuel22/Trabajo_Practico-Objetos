@@ -2,9 +2,27 @@
  */
 
 class Rectangulos {
+  #alto;
+  #ancho;
   constructor(alto_ingresar, ancho_ingresar) {
-    this.alto = alto_ingresar;
-    this.ancho = ancho_ingresar;
+    this.#alto = alto_ingresar;
+    this.#ancho = ancho_ingresar;
+  }
+
+  // get y set
+  get alto() {
+    return this.#alto;
+  }
+  set alto(nuevoValor) {
+    this.#alto = nuevoValor;
+  }
+
+  get ancho() {
+    return this.#ancho;
+  }
+
+  set ancho(nuevoValor) {
+    this.#ancho = nuevoValor;
   }
 
   //metodos
@@ -19,14 +37,18 @@ class Rectangulos {
     document.write(`<p>El ancho es de: ${this.ancho} </p>`);
   }
   perimetro() {
-    document.write(`<p>El perimetro es de: ${(this.alto) + (this.ancho) +(this.alto) + (this.ancho)  } </p>`);
+    document.write(
+      `<p>El perimetro es de: ${
+        this.alto + this.ancho + this.alto + this.ancho
+      } </p>`
+    );
   }
   area() {
-    document.write(`<p>El area es de: ${(this.alto) * (this.ancho)} </p>`);
+    document.write(`<p>El area es de: ${this.alto * this.ancho} </p>`);
   }
 }
 
-const rectangulo1 = new Rectangulos(5,10);
+const rectangulo1 = new Rectangulos(5, 10);
 
 rectangulo1.mostrarDatos();
 
@@ -37,4 +59,3 @@ rectangulo1.mostrarDatos();
 
 rectangulo1.perimetro();
 rectangulo1.area();
-
