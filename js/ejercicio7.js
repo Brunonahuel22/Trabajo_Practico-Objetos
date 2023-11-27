@@ -52,6 +52,7 @@ class Agenda {
   aniadirContacto(Contacto) {
     if (this.#contactos.length < this.tamanio) {
       this.#contactos.push(Contacto);
+      document.write(`<p>CONTACTO AGREGADO</p>`);
     } else {
       document.write(`<p>No se pudó agregar mas contactos, lista llená</p>`);
     }
@@ -147,7 +148,7 @@ const agenda = new Agenda();
   let opcion;
 
   do {
-    // Mostrar opciones del menú
+  
     opcion = prompt(`
       Menú de Agenda:
       1. Añadir contacto
@@ -160,7 +161,7 @@ const agenda = new Agenda();
       8. Salir
     `);
 
-    // Procesar la opción seleccionada
+    
     switch (opcion) {
       case "1":
         const nombre = prompt("Ingrese el nombre del contacto:");
