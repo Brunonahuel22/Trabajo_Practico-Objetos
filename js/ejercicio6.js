@@ -58,4 +58,13 @@ class Libro {
 
 
 const miLibro = new Libro('121242523','JavaScript para todos','Bruno Cordoba',256);
+const libro2 = new Libro('9876543210', 'JavaScript ya no para todos ahre', 'Nahuel Cordoba', 450);
+
 miLibro.mostrarlibro();
+libro2.mostrarlibro();
+
+if (miLibro.paginas > libro2.paginas) {
+    document.write(`<h3>El libro "JavaScript para todos" tiene mas paginas ray</h3>`);
+}else{
+    document.write(`<h3>El libro "JavaScript ya no para todos ahre" tiene mas paginas ray</h3>`);
+}
